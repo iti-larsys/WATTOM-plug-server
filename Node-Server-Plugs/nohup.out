@@ -1,0 +1,672 @@
+*** WARNING *** The program 'nodejs' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=nodejs>
+*** WARNING *** The program 'nodejs' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=nodejs&f=DNSServiceRegister>
+Server is listening on port: 7777
+Starting Monitoring Service
+A new plug is on:  plug2.local
+The length before adding0
+The length after adding 1
+Received an HeartBeat
+{ timestamp: 1496074422.5421968, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074428.5493643, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074434.5565712, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074440.563801, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074446.5709665, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074452.5779014, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074458.5849829, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074464.5977714, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074470.605101, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074476.6122391, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074482.6191208, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074488.626429, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074494.6334324, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074500.6408358, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074506.64788, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074512.6551147, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074518.662373, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074524.6694744, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074529.1767077, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074531.5845332, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074533.9917612, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074536.3993359, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074538.8015761, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074541.2142909, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074543.6165175, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074546.029223, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074548.4365218, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074550.838972, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074553.2515786, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074555.653925, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074558.066398, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074560.4740512, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074562.876641, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074565.2892916, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074567.6915715, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074570.104066, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074572.511688, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074574.9139621, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074577.3265493, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074579.7287672, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074582.1414526, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074584.5489936, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074586.951113, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074589.3640325, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074591.7661383, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074594.1788898, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074596.5864549, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074598.9939206, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074601.4013672, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074603.8036585, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074606.2165763, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074608.6236017, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074611.031535, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074613.4389734, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074615.841133, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074618.253773, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074620.6560636, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074623.068614, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074625.4762104, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074627.8784826, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074630.2910454, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074632.6933908, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074635.1058216, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074637.5134165, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074639.916121, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074642.3283372, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074644.7307966, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074647.1432414, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074649.550852, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074651.9532077, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074654.3658562, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074656.7681625, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074659.1808343, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074661.5880806, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074663.9905725, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074666.403107, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074668.8053205, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074671.2178586, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074673.6255572, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074676.028068, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074678.4408298, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074680.8428266, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074683.2555814, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074685.6631162, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074688.070414, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074690.4779701, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074692.8803446, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074695.2928193, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074697.7004237, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074700.107873, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074702.5155194, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074704.9177337, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074707.3303537, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074709.732715, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074712.1453571, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074714.552788, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074716.955146, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074719.3676558, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074721.7700737, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074724.182609, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074726.589963, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074728.9924583, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074731.4051738, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074733.8071973, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074736.2201247, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074738.6276264, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074741.02988, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074743.4426024, hostname: 'plug2' }
+Ignoring Requests
+Received an HeartBeat
+{ timestamp: 1496074745.844885, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074748.257203, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074750.6650374, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074753.0673058, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074755.4798167, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074757.8819363, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074760.2947001, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074762.7022736, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074765.104296, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074767.5173259, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074769.919582, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074772.3323052, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074774.739723, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074777.1471322, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074779.554618, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074781.9570785, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074784.3697922, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074786.7771955, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074789.1846004, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074791.591924, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074793.994555, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074796.4071088, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074798.8093047, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074801.2218857, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074803.6292493, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074806.0318089, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074808.4444907, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074810.8466733, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074813.2592, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074815.6669116, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074818.0692198, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074820.4817083, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074822.8841286, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074825.2966757, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074827.704094, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074830.106525, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074832.51929, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074834.9212558, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074837.334045, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074839.7416043, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074842.1439, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074844.5566714, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074846.9589524, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074849.371225, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074851.779002, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074854.1813283, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074856.5940678, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074858.9965847, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074861.4093175, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074863.8167346, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074866.2242646, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074868.6316316, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074871.0339625, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074873.4465313, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074875.8541167, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074878.261541, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074880.6689296, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074883.0713887, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074885.4838848, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074887.8863034, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074890.298914, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074892.7061713, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074895.1087563, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074897.521401, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074899.923725, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074902.3363512, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074904.7437043, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074907.1458552, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074909.5588174, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074911.9611323, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074914.373706, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074916.7811234, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074919.183538, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074921.5961618, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074923.998471, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074926.411087, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074928.8187997, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074931.220916, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074933.633379, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074936.0359366, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074938.4484153, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074940.856066, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074943.2627044, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074945.6712167, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074948.073427, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074950.4861076, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074952.8934379, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074955.3007238, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074957.708232, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074960.110737, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074962.5231726, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074964.931061, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074967.3383427, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074969.7455716, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074972.1480687, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074974.5605924, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074976.9630425, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074979.3757727, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074981.783319, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074984.1855242, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074986.5978065, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074989.0004406, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074991.4128497, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074993.8204656, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074996.2228813, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496074998.6355429, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075001.037811, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075003.450118, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075005.8578134, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075008.2602496, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075010.6729062, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075013.0752087, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075015.4878712, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075017.8951943, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075020.297297, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075022.7103643, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075025.1126177, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075027.525206, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075029.9326718, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075032.3401284, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075034.7474353, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075037.1499906, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075039.5625415, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075041.9703443, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075044.3776088, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075046.7848709, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075049.1873665, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075051.6000295, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075054.0023293, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075056.4150765, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075058.8222988, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075061.2247784, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075063.637374, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075066.039714, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075068.4521985, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075070.859729, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075073.2622104, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075075.674528, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075078.0771673, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075080.489619, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075082.8972435, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075085.2996056, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075087.7121406, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075090.1145391, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075092.5270913, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075094.9347122, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075097.336643, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075099.7496045, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075102.1519363, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075104.5644627, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075106.9719868, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075109.3795342, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075111.7867506, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075114.1893837, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075116.6018271, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075119.0092447, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075121.4169614, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075123.8244326, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075126.2266772, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075128.6392453, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075131.0413985, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075133.4541333, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075135.8619325, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075138.264141, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075140.6769857, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075143.0791562, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075145.4915857, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075147.8991673, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075150.301509, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075152.714084, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075155.116476, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075157.52887, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075159.9366844, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075162.3388875, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075164.7514055, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075167.1538644, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075169.5664704, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075171.9740305, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075174.376135, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075176.7888813, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075179.1913157, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075181.6038024, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075184.0114334, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075186.4133368, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075188.826356, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075191.2286174, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075193.6410756, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075196.0484765, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075198.456345, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075200.8636477, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075203.265854, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075205.6785614, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075208.085987, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075210.4935153, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075212.9012232, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075215.3035588, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075217.71605, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075220.1184106, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075222.5312245, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075224.9384065, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075227.340815, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075229.753297, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075232.1557422, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075234.5685613, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075236.9756708, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075239.3779373, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075241.7909794, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075244.193222, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075246.6057093, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075249.0132368, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075251.4155009, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075253.8283315, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075256.2305722, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075258.6431236, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075261.0507135, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075263.452883, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075265.8654966, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075268.2679815, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075270.6804984, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075273.0881827, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075275.4962285, hostname: 'plug2' }
+Received an HeartBeat
+{ timestamp: 1496075277.903096, hostname: 'plug2' }
