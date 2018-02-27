@@ -267,9 +267,9 @@ module.exports = function (socket_io) {
         }else{
             for(var i =0; i < Persons.length; i++){
                 var totalPessoal = 0.0;
-                var plugs = Persons[i].plugs;
-                for(var j = 0; j < plugs.length; j++){
-                    var plugState = plugs.getPlug(plugs[j]);
+                var personPlugs = Persons[i].plugs;
+                for(var j = 0; j < personPlugs.length; j++){
+                    var plugState = plugs.getPlug(personPlugs[j]);
                     var plugData = plugState.data;
                     var power = plugData.power;
                     var FloatPower = parseFloat(power);
