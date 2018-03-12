@@ -52,9 +52,16 @@ module.exports = function (socket_io) {
         var m_plugs = [];
         for (var i = 0; i < plugs.activePlugs.length; i++) {
             if (typeof plugs.activePlugs[i].leds !== "undefined") {
-                led = calculatePosition(plugs.activePlugs[i])[0];
-                led.name = plugs.activePlugs[i].name;
-                m_plugs.push(led);
+            	 var allLeds = calculatePosition(plugs.activePlugs[i]);
+            	 for( var j = 0; j < allLeds.length ; j++)
+            	 {
+            	 	if(allLeds[j].blue == 255)
+            	 	{
+            	 		var targetLed = allLeds[j];
+            	 		targetLed.name = plugs.activePlugs[i].name;
+            	 		m_plugs.push(targetLed);
+            	 	}
+            	 }
             } else {
                 m_plugs.push({name: plugs.activePlugs[i].name});
             }
@@ -419,25 +426,25 @@ module.exports = function (socket_io) {
                 var led = {};
                 if(NumeroPlugs > 0){
                     led.position = 0;
-                    led.red = 255;
+                    led.red = 0;
                     led.green = 0;
-                    led.blue = 0;
+                    led.blue = 255;
                     led.orientation = 1;
                     leds.push(led);
                     if(NumeroPlugs > 1){
                         led = {};
                         led.position = difference;
-                        led.red = 0;
+                        led.red = 255;
                         led.green = 255;
-                        led.blue = 0;
+                        led.blue = 255;
                         led.orientation = 1;
                         leds.push(led);
                         if(NumeroPlugs > 2){
                             led = {};
                             led.position = 2*difference;
-                            led.red = 0;
+                            led.red = 255;
                             led.green = 0;
-                            led.blue = 255;
+                            led.blue = 0;
                             led.orientation = 1;
                             leds.push(led);
                         }
@@ -861,15 +868,15 @@ module.exports = function (socket_io) {
      * Add a new fake plug
      * FOR TEST PURPOSES ONLY
      */
-    /*router.get('/new', function (req, res) {
+    router.get('/new', function (req, res) {
      var plugName = "plug" + plugs.activePlugs.length + ".local";
-     var plugObject = {name:plugName};
+     var plugObject = {name:plugName,connected:true};
      console.log("The length before adding" + plugs.activePlugs.length);
      socket_io.emit("new_plug", plugObject);
      plugs.activePlugs.push(plugObject);
      console.log("The length after adding " + plugs.activePlugs.length);
      res.sendStatus(200);
- });*/
+ });
 
     return router;
 
