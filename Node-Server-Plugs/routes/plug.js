@@ -55,12 +55,12 @@ module.exports = function (socket_io) {
             	 var allLeds = calculatePosition(plugs.activePlugs[i]);
             	 for( var j = 0; j < allLeds.length ; j++)
             	 {
-            	 	if(allLeds[j].blue == 255)
-            	 	{
+            	 	//if(allLeds[j].blue == 255)
+            	 	//{
             	 		var targetLed = allLeds[j];
             	 		targetLed.name = plugs.activePlugs[i].name;
             	 		m_plugs.push(targetLed);
-            	 	}
+            	 	//}
             	 }
             } else {
                 m_plugs.push({name: plugs.activePlugs[i].name});
@@ -460,7 +460,7 @@ module.exports = function (socket_io) {
                 }
             }
             initialMovementStarted = true;
-            res.sendStatus(200);
+            res.status(200).send("DEMO3");
         } else {
             //The request should be ignored no socket is on
             res.status(500).send("There are no sockets available");
