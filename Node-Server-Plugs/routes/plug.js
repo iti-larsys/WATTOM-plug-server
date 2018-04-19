@@ -44,6 +44,7 @@ module.exports = function (socket_io) {
     var initialMovementStarted = false;
 
     var ActualRelay = 0;
+    var multiTarget = true;
 
     /**
      * Returns an array with all LEDs moving and it's corresponding plug name.
@@ -55,12 +56,12 @@ module.exports = function (socket_io) {
             	 var allLeds = calculatePosition(plugs.activePlugs[i]);
             	 for( var j = 0; j < allLeds.length ; j++)
             	 {
-            	 	//if(allLeds[j].blue == 255)
-            	 	//{
+            	 	if(multiTarget || allLeds[j].blue == 255)
+            	 	{
             	 		var targetLed = allLeds[j];
             	 		targetLed.name = plugs.activePlugs[i].name;
             	 		m_plugs.push(targetLed);
-            	 	//}
+            	 	}
             	 }
             } else {
                 m_plugs.push({name: plugs.activePlugs[i].name});
@@ -244,6 +245,7 @@ module.exports = function (socket_io) {
             importantLedPosition += difference;
         });
         res.status(200).send("Plug initialized with " + num_targets + " targets.");
+        multiTarget = false;        
     });
 
     router.get('/:plug/Power', function (req,res) {
@@ -660,6 +662,7 @@ module.exports = function (socket_io) {
      * Stop LEDs
      */
     router.post('/:plugid/stopLeds', function (req, res) {
+        multiTarget = true;
         var plugId = req.params.plugid;
         var plugName = 'plug' + plugId + '.local';
         try {
@@ -868,7 +871,7 @@ module.exports = function (socket_io) {
      * Add a new fake plug
      * FOR TEST PURPOSES ONLY
      */
-    router.get('/new', function (req, res) {
+   /* router.get('/new', function (req, res) {
      var plugName = "plug" + plugs.activePlugs.length + ".local";
      var plugObject = {name:plugName,connected:true};
      console.log("The length before adding" + plugs.activePlugs.length);
@@ -876,9 +879,9 @@ module.exports = function (socket_io) {
      plugs.activePlugs.push(plugObject);
      console.log("The length after adding " + plugs.activePlugs.length);
      res.sendStatus(200);
- });
+ }); */
 
-    return router;
+    return router; 
 
     /**
      * Initializes the plug LEDs with the given configurations
