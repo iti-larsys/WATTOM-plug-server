@@ -662,7 +662,6 @@ module.exports = function (socket_io) {
      * Stop LEDs
      */
     router.post('/:plugid/stopLeds', function (req, res) {
-        multiTarget = true;
         var plugId = req.params.plugid;
         var plugName = 'plug' + plugId + '.local';
         try {
@@ -945,6 +944,7 @@ module.exports = function (socket_io) {
      * @returns {*}
      */
     function stopLeds(plugState) {
+        multiTarget = true;    	
         if (plugState.socketVariable.connected) {
             plugState.socketVariable.emit('stop', {"stop": true});
             delete plugState.leds;
