@@ -70,7 +70,7 @@ exports.networkScanner = function(socket_io_server, plugs){
     });
 
     browser.on('error', function(error) {
-        //console.log('An error occured: ' + error);
+        console.log('An error occured: ' + error);
     });
 
     /**
