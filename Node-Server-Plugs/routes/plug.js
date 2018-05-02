@@ -44,6 +44,10 @@ module.exports = function (socket_io) {
     var initialMovementStarted = false;
 
     var ActualRelay = 0;
+
+    // Variable used to identify if all leds' info are meant to be sent
+    // (true - send all leds' info)
+    // (false - send only blue leds' info)
     var multiTarget = true;
 
     /**
