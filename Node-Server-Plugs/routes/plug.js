@@ -441,8 +441,8 @@ module.exports = function (socket_io) {
                         led = {};
                         led.position = difference;
                         led.red = 255;
-                        led.green = 255;
-                        led.blue = 255;
+                        led.green = 0;
+                        led.blue = 0;
                         led.orientation = 1;
                         leds.push(led);
                         if(NumeroPlugs > 2){
