@@ -183,7 +183,7 @@ module.exports = function (socket_io) {
         }
     });
 
-    router.get('/energy/:value', function (req, res) {
+    router.get('/:plugId/energy/:value', function (req, res) {
         var renew_energy_value = req.params.value;
         var REInt = parseInt(renew_energy_value, 10);
         var numLedSpinRight = 0;
@@ -191,62 +191,65 @@ module.exports = function (socket_io) {
         var importantLedPosition = 0;
         var difference = plugs.LED_NUM/plugs.activePlugs.length;
         plugs.activePlugs.forEach(function (element, index) {
-            stopLeds(element);
-            reviewRenewEnergy(REInt, element);
-            leds = [];
-            for (var i = 0; i < num_targets; i++) {
-                led = {};
-                led.orientation = Math.floor(Math.random() * 2) + 1;
-                if( i !== 0){
-                    renewableEnergyColor(led, REInt);
-                    if(i * 4 + importantLedPosition > 11){
-                        led.position = ( i * 4 + importantLedPosition ) - 12;
-                    }else{
-                        led.position = ( i * 4 + importantLedPosition );
-                    }
-                }else{
-                    led.position = importantLedPosition;
-                    led.red = 0;
-                    led.green = 0;
-                    led.blue = 255;
+        		if(element.name == "plug"+req.params.plugId+".local")
+        		{
+        			stopLeds(element);
+	            reviewRenewEnergy(REInt, element);
+	            leds = [];
+	            for (var i = 0; i < num_targets; i++) {
+	                led = {};
+	                led.orientation = Math.floor(Math.random() * 2) + 1;
+	                if( i !== 0){
+	                    renewableEnergyColor(led, REInt);
+	                    if(i * 4 + importantLedPosition > 11){
+	                        led.position = ( i * 4 + importantLedPosition ) - 12;
+	                    }else{
+	                        led.position = ( i * 4 + importantLedPosition );
+	                    }
+	                }else{
+	                    led.position = importantLedPosition;
+	                    led.red = 0;
+	                    led.green = 0;
+	                    led.blue = 255;
 
-                }
-                if (led.orientation === 1) {
-                    numLedSpinRight += 1;
-                    //Avoid Overlaping Leds
-                    for (k = 0; k < leds.length; k++) {
-                        if ((leds[k].position === led.position && leds[k].orientation === led.orientation )) {
-                            led.orientation = 2;
-                            numLedSpinLeft += 1;
-                            numLedSpinRight -= 1;
-                        }
-                    }
-                    //Num targets excedded?
-                    if (numLedSpinRight > Math.ceil(num_targets / 2)) {
-                        led.orientation = 2;
-                        numLedSpinRight -= 1;
-                        numLedSpinLeft += 1;
-                    }
-                } else if (led.orientation === 2) {
-                    numLedSpinLeft += 1;
-                    for (k = 0; k < leds.length; k++) {
-                        if ((leds[k].position === led.position && leds[k].orientation === led.orientation )) {
-                            led.orientation = 1;
-                            numLedSpinRight += 1;
-                            numLedSpinLeft -= 1;
-                        }
-                    }
-                    if (numLedSpinLeft > Math.ceil(num_targets / 2)) {
-                        led.orientation = 1;
-                        numLedSpinRight += 1;
-                        numLedSpinLeft -= 1;
-                    }
-                }
-                leds.push(led);
-            }
-            var initconfigs = plugs.initConfig(leds, default_velocity, ActualRelay);
-            initializeLeds(element, initconfigs, leds, true);
-            importantLedPosition += difference;
+	                }
+	                if (led.orientation === 1) {
+	                    numLedSpinRight += 1;
+	                    //Avoid Overlaping Leds
+	                    for (k = 0; k < leds.length; k++) {
+	                        if ((leds[k].position === led.position && leds[k].orientation === led.orientation )) {
+	                            led.orientation = 2;
+	                            numLedSpinLeft += 1;
+	                            numLedSpinRight -= 1;
+	                        }
+	                    }
+	                    //Num targets excedded?
+	                    if (numLedSpinRight > Math.ceil(num_targets / 2)) {
+	                        led.orientation = 2;
+	                        numLedSpinRight -= 1;
+	                        numLedSpinLeft += 1;
+	                    }
+	                } else if (led.orientation === 2) {
+	                    numLedSpinLeft += 1;
+	                    for (k = 0; k < leds.length; k++) {
+	                        if ((leds[k].position === led.position && leds[k].orientation === led.orientation )) {
+	                            led.orientation = 1;
+	                            numLedSpinRight += 1;
+	                            numLedSpinLeft -= 1;
+	                        }
+	                    }
+	                    if (numLedSpinLeft > Math.ceil(num_targets / 2)) {
+	                        led.orientation = 1;
+	                        numLedSpinRight += 1;
+	                        numLedSpinLeft -= 1;
+	                    }
+	                }
+	                leds.push(led);
+	            }
+	            var initconfigs = plugs.initConfig(leds, default_velocity, ActualRelay);
+	            initializeLeds(element, initconfigs, leds, true);
+	            importantLedPosition += difference;
+        		}
         });
         res.status(200).send("Plug initialized with " + num_targets + " targets.");
         multiTarget = false;        
