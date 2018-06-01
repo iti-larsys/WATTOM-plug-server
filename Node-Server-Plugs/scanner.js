@@ -33,12 +33,22 @@ exports.networkScanner = function(socket_io_server, plugs){
 
                 // When a good  connection is established add the plug to the memory
                 plugObject['socketVariable'].on('connect',function(data){
-                   console.log("A new plug is on: ", service.host.substring(0, service.host.length - 1) + "");
-                    console.log("The length before adding" + plugs.activePlugs.length);
+                    
+                    //console.log("The length before adding" + plugs.activePlugs.length);
                     socket_io_server.emit("new_plug", {name:service.host.substring(0, service.host.length - 1)});
                     plugObject['socketVariable'].emit('event',{data:'Im connected'});
-                    plugs.activePlugs.push(plugObject);
-                    console.log("The length after adding " + plugs.activePlugs.length);
+					
+                    var plugAlreadyExists = plugs.activePlugs.filter(function(p)
+					{
+						return p.name === plugObject.name;
+					}).length > 0;
+
+					if(!plugAlreadyExists)
+					{
+						console.log("====== A new plug is on: ", service.host.substring(0, service.host.length - 1) + " ======");						
+						plugs.activePlugs.push(plugObject);
+					}
+                    //console.log("The length after adding " + plugs.activePlugs.length);
                 });
 
                 // After 3 failed reconnection attempts removes the plug from the memory

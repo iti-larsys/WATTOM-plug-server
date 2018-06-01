@@ -1,9 +1,10 @@
 #!/bin/sh
-echo "\033[1;31m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" 
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" 
 echo "WATTAPP - INSTALLATION"
-echo "\033[1;31m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" 
+echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" 
 
 echo "Installing packages..."
+sudo apt-get install node
 sudo apt-get install libavahi-compat-libdnssd-dev
 echo "Packages installed!"
 
