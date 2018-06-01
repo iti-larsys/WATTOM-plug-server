@@ -9,3 +9,4 @@
 @cd %~dp0
 @cd Node-Server-Plugs
 @npm start
+@PAUSE
