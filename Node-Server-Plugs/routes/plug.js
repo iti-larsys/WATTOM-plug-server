@@ -4,11 +4,13 @@ module.exports = function (socket_io) {
     var plugs = require('../plugs');
     var Persons = [];
     var Events = [];
+    var Request = require("request");
 
-    var timeThresholdToIgnoreRequests = 1; // Time in seconds while requests from the same source are ignored.
+
+    var timeThresholdToIgnoreRequests = 1; // in seconds while requests from the same source are ignored.
 
     // Default colors used in the LEDs
-    var default_colors_study = [
+    var default_colors = [
         {red: 0, green: 0, blue: 255},
         {red: 0, green: 255, blue: 0},
         {red: 0, green: 255, blue: 255},
@@ -18,7 +20,7 @@ module.exports = function (socket_io) {
         {red: 255, green: 255, blue: 255}
     ];
     // Default colors to be used by the LEDs (changed to display only one red for our study case)
-    var default_colors = [
+    var default_colors_study = [
         {red: 255, green: 0, blue: 0},
         {red: 255, green: 255, blue: 255},
         {red: 255, green: 255, blue: 255},
@@ -74,6 +76,16 @@ module.exports = function (socket_io) {
         res.json(m_plugs);
     });
 
+    router.get('/testExternal', function(req,res){
+        Request.get("https://smile.prsma.com/api/source/madeira-production", (error, response, body) => {
+                if(error) {
+                    return console.dir(error);
+                }
+                console.dir(JSON.parse(body));
+                res.end(body)
+            });
+        });
+
     router.get('/AvailablePlugs', function (req,res){
         var m_plugs = [];
         for (var i = 0; i < plugs.activePlugs.length; i++) {
@@ -84,7 +96,7 @@ module.exports = function (socket_io) {
 
     /**
      * Starts the movement of a LED in all active plugs.
-     */
+     */                      
     router.get('/start/:numtarget', function (req, res) {
         num_targets = req.params.numtarget;
         if (plugs.activePlugs.length > 0) {
@@ -104,7 +116,8 @@ module.exports = function (socket_io) {
                 } else {
                     leds[0].orientation = 2;
                 }
-                randomizeColor(leds[0]);
+                createStudyColors(leds[0],"FIRST_SELECT",0);
+                //randomizeColor(leds[0]);
 
                 var initconfigs = plugs.initConfig(leds, velocity, ActualRelay);
                 if (plugs.activePlugs[i].socketVariable) {
@@ -139,11 +152,11 @@ module.exports = function (socket_io) {
         var time =  req.params.time;
         var stringTime = time.split("-");
         var leds = [{},{}];
+        console.log(stringTime);
         if (plugs.activePlugs.length > 0) {
             for (var i = 0; i < plugs.activePlugs.length; i++) {
                 stopLeds(plugs.activePlugs[i]);
-                var velocity = default_velocity;
-
+                var velocity = 1200000;
                 //leds[0].position = (Math.floor(Math.random() * 12) + 6) % 12; This can't ensure that every single plug will have a different initial position
                 leds[0].position = parseInt(stringTime[0]);
                 leds[0].red = 255;
@@ -244,9 +257,13 @@ module.exports = function (socket_io) {
 	                        numLedSpinLeft -= 1;
 	                    }
 	                }
-	                leds.push(led);
-	            }
-	            var initconfigs = plugs.initConfig(leds, default_velocity, ActualRelay);
+                    leds.push(led);
+                    
+                }
+                dummy = {};
+                renewableEnergyColor(dummy, REInt);
+                var initconfigs = plugs.initConfig(leds, default_velocity, ActualRelay);
+                initconfigs.background= {red:Math.floor(dummy.red/30),green:Math.floor(dummy.green/30),blue:Math.floor(dummy.blue/30)};
 	            initializeLeds(element, initconfigs, leds, true);
 	            importantLedPosition += difference;
         		}
@@ -729,7 +746,8 @@ module.exports = function (socket_io) {
                             led = {};
                             led.position = localLedStandartPosition % 12;
                             led.orientation = Math.floor(Math.random() * 2) + 1;
-                            randomizeColorStudy(led,i);
+                            //
+                            createStudyColors(led,"MAIN_MENU",i,plugState.relayState);
 
                             if (led.orientation === 1) {
                                 numLedSpinRight += 1;
@@ -765,8 +783,22 @@ module.exports = function (socket_io) {
                             leds.push(led);
                             localLedStandartPosition += 4;
                         }
-                        var initconfigs = plugs.initConfig(leds, velocity, ActualRelay);
+                        dummy = {};
+                        console.log(" Relay Status "+plugState.relayState);                        
+                        Request.get("https://smile.prsma.com/api/source/madeira-production", (error, response, body) => {
+                        if(error) {
+                            return console.dir(error);
+                        }
+                        var prod_data = JSON.parse(body);
+                        var renew_quota = ((prod_data[0].hidrica+prod_data[0].eolica+prod_data[0].bio+prod_data[0].foto)/prod_data[0].total)*100;
+                        renew_quota = Math.round(renew_quota)
+                        console.log(renew_quota);
+                        reviewRenewEnergy(renew_quota, element);
+                        renewableEnergyColor(dummy, renew_quota);
+                        var initconfigs = plugs.initConfig(leds, default_velocity, ActualRelay);
+                        initconfigs.background= {red:Math.floor(dummy.red/30),green:Math.floor(dummy.green/30),blue:Math.floor(dummy.blue/30)};
                         initializeLeds(element, initconfigs, leds, true);
+                         });
                     }
                 });
                 res.status(200).send("Plug initialized with " + num_targets + " targets.");
@@ -913,7 +945,7 @@ module.exports = function (socket_io) {
 
     function SelectedLeds(plugState, initConfigs, leds, isSelected) {
         if (plugState.socketVariable.connected) {
-            plugState.socketVariable.emit('selectedLeds', initConfigs);         //Send startUp Data
+            plugState.socketVariable.emit('initConfig', initConfigs);         //Send startUp Data
             Object.assign(plugState, plugState, initConfigs);
             plugState.selected = isSelected;
             plugState.initTime = Date.now() / 1000;
@@ -1020,13 +1052,39 @@ module.exports = function (socket_io) {
     /**
      * Select the color to be used on the LED
      * @param led
-     */
-    function randomizeColor(led) {
-        var color = default_colors_study[actual_color_position % default_colors.length];
+     */    function randomizeColor(led) {
+        var color = default_colors[actual_color_position % default_colors.length];
         actual_color_position++;
         led.red = color.red;
         led.green = color.green;
         led.blue = color.blue;
+    }
+
+        /**
+     * Select the color to be used on the LED
+     * @param led
+     */
+    function createStudyColors(led,command,index,relayState) {
+        if(command=="FIRST_SELECT"){
+            led.red = 255;
+            led.green = 255;
+            led.blue = 255;
+        }else if(command="MAIN_MENU"){
+            if(index==0){
+                if(relayState==0){
+                    led.red = 255;
+                    led.green = 255;
+                }else if(relayState==1){
+                    led.red = 0;
+                    led.green = 0;
+                }
+                led.blue = 255;
+            }else if(index==1){
+                led.red = 128;
+                led.green = 0;
+                led.blue = 128;
+            }
+        }
     }
 
     /**
@@ -1034,13 +1092,14 @@ module.exports = function (socket_io) {
      * @param led
      */
     function randomizeColorStudy(led, pos) {
-        var color = default_colors_study[pos];
+        var color = default_colors[pos];
         actual_color_position++;
         led.red = color.red;
         led.green = color.green;
         led.blue = color.blue;
     }
 
+    
     function reviewRenewEnergy(renew_energy_value, plugState) {
         if (renew_energy_value >= 26) {
             plugState.delay = 300;
@@ -1087,7 +1146,67 @@ module.exports = function (socket_io) {
         }
     }
 
-    function renewableEnergyColor(led, renew_energy_value) {
+function renewableEnergyColor(led, renew_energy_value) {
+        if (renew_energy_value >= 26) {
+            led.red = 0;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 24) {
+            led.red = 50;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 22) {
+            led.red = 172;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 20) {
+            led.red = 200;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 18) {
+            led.red = 205;
+            led.green = 255;
+            led.blue = 120;
+        } else if (renew_energy_value >= 16) {
+            led.red = 213;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 14) {
+            led.red = 255;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 12) {
+            led.red = 255;
+            led.green = 255;
+            led.blue = 0;
+        } else if (renew_energy_value >= 10) {
+            led.red = 255;
+            led.green = 210;
+            led.blue = 0;
+        } else if (renew_energy_value >= 8) {
+            led.red = 255;
+            led.green = 205;
+            led.blue = 168;
+        } else if (renew_energy_value >= 6) {
+            led.red = 255;
+            led.green = 188;
+            led.blue = 0;
+        } else if (renew_energy_value >= 4) {
+            led.red = 255;
+            led.green = 88;
+            led.blue = 84;
+        } else if (renew_energy_value >= 2) {
+            led.red = 255;
+            led.green = 42;
+            led.blue = 0;
+        } else {
+            led.red = 255;
+            led.green = 0;
+            led.blue = 0;
+        }
+    }
+
+    function renewableEnergyColorOLD(led, renew_energy_value) {
         if (renew_energy_value >= 26) {
             led.red = 0;
             led.green = 255;
@@ -1173,8 +1292,8 @@ module.exports = function (socket_io) {
                 'orientation': parseInt(result.orientation),
                 'red': parseInt(result.red),
                 'green': parseInt(result.green),
-                'blue': parseInt(result.blue)
-            })
+                'blue': parseInt(result.blue),
+		 })
 
         });
         return leds;
