@@ -560,7 +560,10 @@ module.exports = function (socket_io) {
                 } else {
                     leds[0].orientation = 2;
                 }
-                randomizeColor(leds[0]);
+                leds[0].red   = 255;
+                leds[0].blue  = 255;
+                leds[0].green = 255;
+                //randomizeColor(leds[0]);
 
                 var initconfigs = plugs.initConfig(leds, velocity, ActualRelay);
                 if (plugs.activePlugs[i].socketVariable) {
@@ -792,6 +795,7 @@ module.exports = function (socket_io) {
                         var prod_data = JSON.parse(body);
                         var renew_quota = ((prod_data[0].hidrica+prod_data[0].eolica+prod_data[0].bio+prod_data[0].foto)/prod_data[0].total)*100;
                         renew_quota = Math.round(renew_quota)
+                        //renew_quota = 20;
                         console.log(renew_quota);
                         reviewRenewEnergy(renew_quota, element);
                         renewableEnergyColor(dummy, renew_quota);

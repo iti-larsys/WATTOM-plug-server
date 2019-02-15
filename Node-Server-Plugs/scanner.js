@@ -65,7 +65,7 @@ exports.networkScanner = function(socket_io_server, plugs){
                 });
 
                 plugObject['socketVariable'].on('powerData',function(data){
-                    //console.log("Recebi os dados do edison!!!!! "+data);
+                    //console.log("Recebi os dados do edison!!!!! "+data.data);
                     var plugState = plugs.getPlug(data.hostname + '.local');
                     plugState.data = data;
                 });
