@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "~1.20.1",
+    "body-parser": "~2.0.0",
     "bootstrap-colorpicker": "^3.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~4.3.0",
